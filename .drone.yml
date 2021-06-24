@@ -3,13 +3,14 @@ type: docker
 name: default
 
 steps:
-- name: lint
-  image: python:3.7-alpine
+- name: backend
+  image: golang
   commands:
-  - python -m pip install -r requirements.txt
-  - flake8
- 
-trigger:
-  repo:
-    include:
-    - DroneTest-Seint/Drone-testing
+  - go build
+  - go test
+
+- name: frontend
+  image: node
+  commands:
+  - npm install
+  - npm test
