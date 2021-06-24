@@ -9,7 +9,7 @@ steps:
   - python -m pip install -r requirements.txt
   - flake8
  
- trigger:
-  event:
-    incude:
-    - push
+trigger:
+  repo:
+    include:
+    - DroneTest-Seint/Drone-testing
