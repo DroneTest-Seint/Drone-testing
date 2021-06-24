@@ -4,9 +4,9 @@ name: default
 
 steps:
 - name: backend
-  image: golang
-  commands:
+  image: golang 
   failure: ignore
+  commands:
   - go build
   - go test
 
