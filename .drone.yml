@@ -11,5 +11,5 @@ steps:
  
 trigger:
   repo:
-    include:
+    exclude:
     - DroneTest-Seint/Drone-testing
