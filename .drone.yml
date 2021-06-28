@@ -12,6 +12,11 @@ steps:
   commands:
   - echo “Output from second step”;
 
+- name: third
+  image: php
+  commands:
+  - echo “Output from third step”;
+
   depends_on:
   - first
   - second
