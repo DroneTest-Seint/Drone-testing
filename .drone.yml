@@ -1,22 +1,11 @@
 kind: pipeline
-name: testing
+name: default
 
 steps:
-- name: first
-  image: php
-  commands:
-  - echo “Output from first step”;
-
-- name: second
-  image: php
-  commands:
-  - echo “Output from second step”;
-
-- name: third
-  image: php
-  commands:
-  - echo “Output from third step”;
-
-  depends_on:
-  - first
-  - second
+- name: build
+  image: alpine
+  environment:
+    USERNAME:
+      from_secret: docker_username
+    PASSWORD:
+      from_secret: docker_password
