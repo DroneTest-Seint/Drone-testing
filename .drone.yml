@@ -5,7 +5,7 @@ steps:
 - name: build
   image: plugins/docker
   settings:
-    repo: octocat/hello-world
+    repo: DroneTest-Seint/Drone-testing
     username:
       from_secret: docker_username
     password:
